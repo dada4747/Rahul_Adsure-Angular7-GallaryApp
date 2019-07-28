@@ -1,0 +1,31 @@
+<div class="aling">
+<table align="center" *ngIf="imageList" >
+        <tr *ngFor="let i of rowIndexArray">
+          <td>
+            <div class="imagebox" *ngIf="i==0">
+                <a routerLink="/images">
+                <img src="/assets/img/select_image.jpg" class="img-fluid">
+                <span class="imagebox-desc">inser new image </span>
+            </a>
+            </div>
+            <div class="imagebox" *ngIf="i==!0">
+                    <img [src]="imageList[3*i-1].imageUrl" class="img-fluid">
+                    <span class="imagebox-desc">{{imageList[3*i-1].caption}}</span>
+                </div>
+          </td>
+          
+          <td *ngIf="imageList[3*i]">
+            <div class="imagebox">
+              <img [src]="imageList[3*i].imageUrl" class="img-fluid">
+              <span class="imagebox-desc">{{imageList[3*i+1].caption}}</span>
+            </div>
+          </td>
+          <td *ngIf="imageList[3*i+1]">
+            <div class="imagebox">
+              <img [src]="imageList[3*i+1].imageUrl" class="img-fluid">
+              <span class="imagebox-desc">{{imageList[3*i+1].caption}}</span>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>

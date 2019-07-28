@@ -1,0 +1,43 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <div class="container-fluid px-0">
+      <div class="row w-100">
+        <div class="col-4">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" (click)="isShown = !isShown" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+  
+        <div class="col-8">
+          <div class="collapse justify-content-end navbar-collapse"  id="navbarTogglerDemo03">
+            <ul class="navbar-nav mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" routerLinkActive="myActiveClass active" [routerLinkActiveOptions]="{exact:true}" routerLink="/" >Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="myActiveClass active" routerLink="/images" >images</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="myActiveClass active" routerLink="/contact" >contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="myActiveClass active" routerLink="/blogs" >Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="myActiveClass active" routerLink="/docs" >Docs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="myActiveClass active" routerLink="/admin" >Admin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+<router-outlet></router-outlet>
